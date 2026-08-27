@@ -1,0 +1,671 @@
+/* ============================================
+   BOOK SHOWCASE HERO SECTION - COMPLETE FIX
+============================================ */
+
+/* Hero Book Section */
+.hero-book-section {
+    background-color: var(--color-beige);
+    padding: 100px 0 80px;
+    position: relative;
+}
+
+/* Book Title - Top Center */
+.book-hero-title {
+    text-align: center;
+    margin-bottom: 80px;
+    animation: fadeInDown 0.8s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-book-title {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    line-height: 1.1;
+    color: var(--color-black);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Book Hero Grid - 3 Columns */
+.book-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px 1fr;
+    gap: 60px;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto 80px;
+}
+
+/* Left Column - Reviews */
+.hero-reviews-left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 20px;
+}
+
+/* Right Column - Reviews (starts lower) */
+.hero-reviews-right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 100px;
+}
+
+/* Center Column - Book Cover */
+.hero-book-cover {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+}
+
+.book-cover-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.book-cover-wrapper:hover {
+    transform: translateY(-15px) scale(1.04);
+}
+
+.main-book-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 3px;
+    box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.4),
+        0 15px 40px rgba(0, 0, 0, 0.3),
+        0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Review Quote Styling */
+.review-quote {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Staggered Animation for Left Column */
+.hero-reviews-left .review-quote:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.hero-reviews-left .review-quote:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.hero-reviews-left .review-quote:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+/* Staggered Animation for Right Column */
+.hero-reviews-right .review-quote:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.hero-reviews-right .review-quote:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.hero-reviews-right .review-quote:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.review-quote blockquote {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.review-quote p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-black);
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-weight: 400;
+}
+
+.review-quote cite {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--color-brown-medium);
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Hero Actions - Buttons Below */
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 0;
+    animation: fadeIn 1s ease 1s backwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: var(--font-sans);
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--color-brown-dark);
+    color: white;
+    border-color: var(--color-brown-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-brown-medium);
+    border-color: var(--color-brown-medium);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(113, 66, 49, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-black);
+    color: var(--color-black);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-black);
+    color: var(--color-beige);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--color-brown-dark);
+    color: var(--color-brown-dark);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-brown-dark);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(113, 66, 49, 0.3);
+}
+
+/* No Book Message */
+.no-book-message {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.no-book-message h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--color-brown-dark);
+    margin-bottom: 20px;
+}
+
+.no-book-message p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* ============================================
+   NEWSLETTER SECTION
+============================================ */
+
+.newsletter-section {
+    background: linear-gradient(135deg, var(--color-brown-dark) 0%, var(--color-brown-medium) 100%);
+    padding: 80px 0;
+    color: white;
+}
+
+.newsletter-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.newsletter-wrapper h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.newsletter-wrapper p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.form-group-inline {
+    display: flex;
+    gap: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group-inline input[type="email"] {
+    flex: 1;
+    padding: 16px 24px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.form-group-inline input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group-inline input[type="email"]:focus {
+    outline: none;
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.form-group-inline .btn {
+    padding: 16px 40px;
+    background-color: white;
+    color: var(--color-brown-dark);
+    border: 2px solid white;
+    white-space: nowrap;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    font-family: var(--font-sans);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.form-group-inline .btn:hover {
+    background-color: var(--color-beige);
+    border-color: var(--color-beige);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+============================================ */
+
+@media (max-width: 1400px) {
+    .book-hero-grid {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .book-hero-grid {
+        grid-template-columns: 1fr 360px 1fr;
+        gap: 50px;
+    }
+    
+    .main-book-title {
+        font-size: 3.5rem;
+        letter-spacing: 3px;
+    }
+    
+    .hero-reviews-left,
+    .hero-reviews-right {
+        gap: 45px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-book-section {
+        padding: 80px 0 60px;
+    }
+
+    .book-hero-title {
+        margin-bottom: 60px;
+    }
+
+    .book-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-reviews-right {
+        padding-top: 0;
+    }
+    
+    .hero-book-cover {
+        order: -1;
+    }
+    
+    .main-book-title {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+    
+    .hero-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .btn-large {
+        flex: 0 1 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-book-section {
+        padding: 60px 0;
+    }
+    
+    .book-hero-title {
+        margin-bottom: 50px;
+    }
+    
+    .main-book-title {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .review-quote p {
+        font-size: 1rem;
+    }
+    
+    .hero-reviews-left,
+    .hero-reviews-right {
+        gap: 35px;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-large {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .form-group-inline {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .form-group-inline .btn {
+        width: 100%;
+    }
+    
+    .newsletter-wrapper h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-book-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .book-hero-grid {
+        gap: 40px;
+    }
+    
+    .hero-reviews-left,
+    .hero-reviews-right {
+        gap: 30px;
+        padding: 0;
+    }
+    
+    .review-quote p {
+        font-size: 0.95rem;
+    }
+    
+    .review-quote cite {
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================
+   NIGHT MODE - FIXED
+============================================ */
+
+body.night-mode .hero-book-section {
+    background-color: #1a1a1a;
+}
+
+body.night-mode .main-book-title {
+    color: var(--color-beige);
+}
+
+body.night-mode .review-quote p {
+    color: #e8e8e8;
+}
+
+body.night-mode .review-quote cite {
+    color: var(--color-brown-medium);
+}
+
+body.night-mode .btn-primary {
+    background-color: var(--color-brown-dark);
+    border-color: var(--color-brown-dark);
+    color: white;
+}
+
+body.night-mode .btn-primary:hover {
+    background-color: var(--color-brown-medium);
+    border-color: var(--color-brown-medium);
+}
+
+body.night-mode .btn-secondary {
+    border-color: var(--color-beige);
+    color: var(--color-beige);
+    background-color: transparent;
+}
+
+body.night-mode .btn-secondary:hover {
+    background-color: var(--color-beige);
+    color: var(--color-black);
+    border-color: var(--color-beige);
+}
+
+body.night-mode .btn-outline {
+    border-color: var(--color-brown-medium);
+    color: var(--color-brown-medium);
+}
+
+body.night-mode .btn-outline:hover {
+    background-color: var(--color-brown-medium);
+    color: white;
+    border-color: var(--color-brown-medium);
+}
+
+body.night-mode .no-book-message h2 {
+    color: var(--color-beige);
+}
+
+body.night-mode .no-book-message p {
+    color: #aaa;
+}
+
+body.night-mode .newsletter-section {
+    background: linear-gradient(135deg, #2c2c2c 0%, #3a3a3a 100%);
+}
+
+body.night-mode .form-group-inline input[type="email"] {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+body.night-mode .form-group-inline input[type="email"]:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Print Styles */
+@media print {
+    .hero-actions,
+    .newsletter-section {
+        display: none;
+    }
+    
+    .book-hero-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-reviews-left,
+    .hero-reviews-right {
+        page-break-inside: avoid;
+    }
+    
+    .main-book-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+.books-page .section-padding {
+  padding: 80px 0;
+}
+
+.books-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.book-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.7);
+}
+
+.books-title {
+  font-family: "Cinzel Decorative", serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.books-meta {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.books-actions {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Grid للأقسام الأخرى */
+
+.section-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-inner.narrow {
+  max-width: 720px;
+}
+
+.books-features-grid,
+.books-reviews-grid,
+.books-quotes-grid {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .books-features-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .books-reviews-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.book-quote-card,
+.book-review-card,
+.books-feature {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 14px;
+  padding: 20px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  .books-hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .books-actions {
+    justify-content: center;
+  }
+}
+
+

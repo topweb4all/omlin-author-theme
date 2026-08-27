@@ -1,0 +1,440 @@
+/* ============================================
+   SINGLE BOOK PAGE - MODERN DESIGN
+============================================ */
+
+/* Book Page Container */
+.single-book-page {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.books-hero {
+  background: linear-gradient(135deg, #f5eee5 0%, #fdfbf7 100%);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.books-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(113, 66, 49, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(162, 120, 91, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+.books-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 60px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+/* Book Cover */
+.books-hero-cover {
+  position: relative;
+}
+
+.books-hero-cover .book-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 0 20px 80px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.books-hero-cover:hover .book-cover {
+  transform: translateY(-8px);
+}
+
+/* Hero Content */
+.books-hero-content {
+  padding-top: 20px;
+}
+
+.books-title {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #714231;
+  margin: 0 0 16px 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.books-subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  color: #8b6449;
+  margin: 0 0 12px 0;
+  font-style: italic;
+}
+
+.books-tagline {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.1rem;
+  color: #2c2c2c;
+  margin: 0 0 32px 0;
+  line-height: 1.6;
+}
+
+/* Unified Details Box */
+.books-series-box {
+  background: rgba(113, 66, 49, 0.08);
+  border: 1px solid rgba(113, 66, 49, 0.2);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+  backdrop-filter: blur(10px);
+}
+
+.books-series-line,
+.books-genres-line,
+.books-details-line {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(113, 66, 49, 0.15);
+}
+
+.books-series-line:last-child,
+.books-genres-line:last-child,
+.books-details-line:last-child {
+  border-bottom: none;
+}
+
+.books-series-line .series-label {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 1.1rem;
+  color: #714231;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.books-genres-line .label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 12px;
+}
+
+.books-genres-line .value {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  color: #2c2c2c;
+}
+
+.books-details-line {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  color: #2c2c2c;
+}
+
+/* Action Buttons */
+.books-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 32px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #a2785b;
+  color: white;
+  border: 2px solid #a2785b;
+}
+
+.btn-primary:hover {
+  background: #8b6449;
+  border-color: #8b6449;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(162, 120, 91, 0.3);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #714231;
+  border: 2px solid rgba(113, 66, 49, 0.3);
+}
+
+.btn-ghost:hover {
+  background: rgba(113, 66, 49, 0.1);
+  border-color: #714231;
+  transform: translateY(-2px);
+}
+
+/* Content Sections */
+.section-padding {
+  padding: 80px 20px;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-inner.narrow {
+  max-width: 850px;
+}
+
+.section-title {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 2.2rem;
+  color: #714231;
+  margin: 0 0 40px 0;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #a2785b;
+  margin: 20px auto 0;
+}
+
+/* About Book Section */
+.books-blurb {
+  background: white;
+}
+
+.book-blurb {
+  font-family: "Alice", serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #2c2c2c;
+}
+
+.book-blurb p {
+  margin-bottom: 20px;
+}
+
+.book-blurb p:first-of-type::first-letter {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 4rem;
+  line-height: 0.9;
+  float: left;
+  margin: 4px 12px 0 0;
+  color: #714231;
+  font-weight: 700;
+}
+
+/* Reviews Section */
+.books-reviews {
+  background: #f9f7f3;
+}
+
+.reviews-content-wrapper {
+  margin-top: 40px;
+}
+
+/* Comments Section */
+.books-comments {
+  background: white;
+}
+
+.comments-widget-area {
+  margin-bottom: 60px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .books-hero-inner {
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+  }
+
+  .books-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .books-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .books-hero-cover {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .books-title {
+    font-size: 2rem;
+  }
+
+  .books-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .books-actions {
+    justify-content: center;
+  }
+
+  .section-padding {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .books-hero {
+    padding: 60px 15px;
+  }
+
+  .books-title {
+    font-size: 1.8rem;
+  }
+
+  .books-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .books-tagline {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ============================================
+   DARK MODE - body.night-mode (Unified System)
+============================================ */
+body.night-mode .single-book-page {
+  background-color: #0f0f0f;
+}
+
+body.night-mode .books-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+body.night-mode .books-hero::before {
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(162, 120, 91, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(113, 66, 49, 0.1) 0%,
+      transparent 50%
+    );
+}
+
+body.night-mode .books-title {
+  color: #f5eee5;
+}
+
+body.night-mode .books-subtitle {
+  color: #a2785b;
+}
+
+body.night-mode .books-tagline {
+  color: #d4d4d4;
+}
+
+body.night-mode .books-series-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(162, 120, 91, 0.3);
+}
+
+body.night-mode .books-series-line .series-label {
+  color: #a2785b;
+}
+
+body.night-mode .books-genres-line .label {
+  color: #999;
+}
+
+body.night-mode .books-genres-line .value {
+  color: #f5eee5;
+}
+
+body.night-mode .detail-item {
+  color: #d4d4d4;
+}
+
+body.night-mode .btn-ghost {
+  color: #f5eee5;
+  border-color: rgba(245, 238, 229, 0.3);
+}
+
+body.night-mode .btn-ghost:hover {
+  background: rgba(245, 238, 229, 0.1);
+  border-color: #f5eee5;
+}
+
+body.night-mode .books-blurb {
+  background: #1a1a1a;
+}
+
+body.night-mode .books-reviews {
+  background: #141414;
+}
+
+body.night-mode .books-comments {
+  background: #1a1a1a;
+}
+
+body.night-mode .book-blurb {
+  color: #d4d4d4;
+}
+
+body.night-mode .book-blurb p:first-of-type::first-letter {
+  color: #a2785b;
+}
+
+body.night-mode .section-title {
+  color: #f5eee5;
+}
+
+body.night-mode .section-title::after {
+  background: #a2785b;
+}

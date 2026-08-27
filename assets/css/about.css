@@ -1,0 +1,227 @@
+/* ============ ABOUT PAGE BASE ============ */
+
+.about-page {
+  background: transparent;
+  color: var(--text-color, #f5eee5);
+}
+
+/* كل النصوص ترث لون الصفحة */
+.about-page,
+.about-page * {
+  color: inherit;
+}
+
+.about-page .section-padding {
+  padding: 80px 0;
+}
+
+.about-page .section-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.about-page .section-inner.narrow {
+  max-width: 780px;
+}
+
+/* ============ HERO ============ */
+
+.about-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: 40px;
+  align-items: center;
+}
+
+/* صورة الكاتبة */
+
+.about-hero-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo-frame {
+  max-width: 260px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.7);
+}
+
+.about-photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* نص التعريف */
+
+.about-hero-text {
+  text-align: left;
+}
+
+.about-kicker {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 8px;
+}
+
+.about-name {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 2.2rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.about-tagline {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 18px;
+}
+
+/* بيانات سريعة */
+
+.about-meta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.about-meta-list li + li {
+  margin-top: 4px;
+}
+
+/* ============ سوشيال ميديا ============ */
+
+.about-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+}
+
+.about-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.84rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 6px 12px 4px;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 238, 229, 0.35);
+  background: rgba(0, 0, 0, 0.15);
+  opacity: 0.95;
+  transition: background 0.18s ease, border-color 0.18s ease,
+              transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* دائرة صغيرة قبل النص – يمكن استبدالها بأيقونة لاحقاً */
+.about-social-link::before {
+  content: "●";
+  font-size: 0.5rem;
+}
+
+.about-social-link:hover {
+  background: rgba(113, 66, 49, 0.3);
+  border-color: var(--accent-color, #714231);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* ============ STORY SECTION ============ */
+
+.section-title {
+  font-family: "Cinzel Decorative", serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+}
+
+.about-story-body {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.02rem;
+  line-height: 1.8;
+  opacity: 0.96;
+}
+
+.about-story-body p + p {
+  margin-top: 0.8rem;
+}
+
+/* ============ HIGHLIGHTS (لو أضفتها لاحقاً) ============ */
+
+.about-highlights-grid {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 900px) {
+  .about-highlights-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.about-highlight {
+  border-radius: 16px;
+  padding: 20px 22px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 900px) {
+  .about-page .section-padding {
+    padding: 64px 0;
+  }
+
+  .about-hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-hero-text {
+    text-align: center;
+  }
+
+  .about-social {
+    justify-content: center;
+  }
+
+  .about-hero-photo {
+    order: -1;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-page .section-inner {
+    padding: 0 18px;
+  }
+
+  .about-name {
+    font-size: 1.8rem;
+  }
+
+  .about-tagline {
+    font-size: 1rem;
+  }
+
+  .about-story-body {
+    font-size: 0.98rem;
+  }
+}

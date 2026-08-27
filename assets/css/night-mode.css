@@ -1,0 +1,612 @@
+/* ============================================
+   NIGHT MODE STYLES - FIXED & ENHANCED VERSION
+   المظهر الداكن - نسخة محسّنة ومصلحة
+============================================ */
+
+/* ============================================
+   الألوان الأساسية للمظهر الداكن
+============================================ */
+body.night-mode {
+  background-color: #1a1a1a;
+  color: #f5eee5;
+}
+
+/* ============================================
+   HEADER - الهيدر في المظهر الداكن
+============================================ */
+body.night-mode .site-header {
+  background-color: rgba(26, 26, 26, 0.98);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom-color: #333;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.night-mode .author-label {
+  color: #a2785b;
+}
+
+body.night-mode .author-name {
+  color: #f5eee5;
+}
+
+body.night-mode .main-navigation .nav-menu a {
+  color: #f5eee5;
+}
+
+body.night-mode .main-navigation .nav-menu a::after {
+  background-color: #a2785b;
+}
+
+body.night-mode .main-navigation .nav-menu a:hover {
+  color: #a2785b;
+}
+
+/* زر التبديل نفسه */
+body.night-mode .night-mode-btn {
+  border-color: #a2785b;
+  background-color: rgba(162, 120, 91, 0.15);
+}
+
+body.night-mode .night-mode-btn:hover {
+  background-color: rgba(162, 120, 91, 0.3);
+  border-color: #a2785b;
+  transform: rotate(-20deg);
+}
+
+body.night-mode .mobile-menu-toggle span {
+  background-color: #f5eee5;
+}
+
+/* ============================================
+   HERO SECTION - قسم البطل
+============================================ */
+body.night-mode .hero-section,
+body.night-mode .hero-book-section {
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+}
+
+body.night-mode .hero-label {
+  color: #a2785b;
+}
+
+body.night-mode .hero-title,
+body.night-mode .main-book-title {
+  color: #f5eee5;
+}
+
+body.night-mode .hero-description {
+  color: #cccccc;
+}
+
+body.night-mode .stat-item {
+  color: #999999;
+}
+
+/* المراجعات في صفحة الكتاب */
+body.night-mode .review-quote blockquote p {
+  color: #f5eee5;
+}
+
+body.night-mode .review-quote cite {
+  color: #a2785b;
+}
+
+/* ============================================
+   MOOD SECTION - قسم المزاج
+============================================ */
+body.night-mode .mood-section {
+  background-color: #222222;
+}
+
+body.night-mode .mood-header h2 {
+  color: #f5eee5;
+}
+
+body.night-mode .mood-header p {
+  color: #999999;
+}
+
+body.night-mode .mood-btn {
+  background-color: #2c2c2c;
+  border-color: #444444;
+  color: #f5eee5;
+}
+
+body.night-mode .mood-btn:hover {
+  border-color: #a2785b;
+  background-color: #333333;
+  box-shadow: 0 8px 25px rgba(162, 120, 91, 0.2);
+}
+
+body.night-mode .mood-btn.active {
+  background-color: #714231;
+  border-color: #714231;
+  color: white;
+  box-shadow: 0 12px 35px rgba(113, 66, 49, 0.4);
+}
+
+body.night-mode .quote-text {
+  color: #f5eee5;
+}
+
+body.night-mode .quote-source {
+  color: #a2785b;
+}
+
+/* ============================================
+   BOOKS SECTION - قسم الكتب
+============================================ */
+body.night-mode .books-grid-section,
+body.night-mode .book-showcase {
+  background-color: #1a1a1a;
+}
+
+body.night-mode .section-header h2 {
+  color: #f5eee5;
+}
+
+body.night-mode .section-header p {
+  color: #999999;
+}
+
+body.night-mode .book-card {
+  background-color: #2c2c2c;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.night-mode .book-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  transform: translateY(-8px);
+}
+
+body.night-mode .genre-tag,
+body.night-mode .genre-tag-small {
+  background-color: #444444;
+  color: #f5eee5;
+  border: 1px solid #555555;
+}
+
+body.night-mode .book-card-title,
+body.night-mode .book-card-title a {
+  color: #f5eee5;
+}
+
+body.night-mode .book-card-title a:hover {
+  color: #a2785b;
+}
+
+body.night-mode .book-card-excerpt {
+  color: #aaaaaa;
+}
+
+body.night-mode .btn-text {
+  color: #a2785b;
+}
+
+body.night-mode .btn-text:hover {
+  color: #536564;
+}
+
+/* ============================================
+   BLOG SECTION - قسم المدونة
+============================================ */
+body.night-mode .blog-highlights-section {
+  background-color: #222222;
+}
+
+body.night-mode .blog-card {
+  background-color: #2c2c2c;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.night-mode .blog-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  transform: translateY(-8px);
+}
+
+body.night-mode .blog-date {
+  background-color: #3c3c3c;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.night-mode .date-day {
+  color: #f5eee5;
+}
+
+body.night-mode .date-month {
+  color: #a2785b;
+}
+
+body.night-mode .blog-category a {
+  color: #a2785b;
+}
+
+body.night-mode .blog-category a:hover {
+  color: #714231;
+}
+
+body.night-mode .blog-card-title a {
+  color: #f5eee5;
+}
+
+body.night-mode .blog-card-title a:hover {
+  color: #a2785b;
+}
+
+body.night-mode .blog-card-excerpt {
+  color: #aaaaaa;
+}
+
+body.night-mode .read-more-link {
+  color: #a2785b;
+}
+
+body.night-mode .read-more-link:hover {
+  color: #536564;
+}
+
+body.night-mode .blog-card-meta {
+  border-top-color: #444444;
+  color: #777777;
+}
+
+body.night-mode .meta-item svg {
+  opacity: 0.7;
+}
+
+/* ============================================
+   NEWSLETTER SECTION - قسم النشرة البريدية
+============================================ */
+body.night-mode .newsletter-section {
+  background-color: #1a1a1a;
+}
+
+body.night-mode .newsletter-wrapper {
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  border: 1px solid #333333;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+body.night-mode .newsletter-wrapper h2 {
+  color: #f5eee5;
+}
+
+body.night-mode .newsletter-wrapper p {
+  color: #aaaaaa;
+}
+
+body.night-mode .newsletter-form input[type="email"] {
+  background-color: #1a1a1a;
+  border-color: #444444;
+  color: #f5eee5;
+}
+
+body.night-mode .newsletter-form input[type="email"]::placeholder {
+  color: #666666;
+}
+
+body.night-mode .newsletter-form input[type="email"]:focus {
+  border-color: #a2785b;
+  box-shadow: 0 0 0 3px rgba(162, 120, 91, 0.2);
+}
+
+/* ============================================
+   BUTTONS - الأزرار في المظهر الداكن
+============================================ */
+body.night-mode .btn {
+  border-color: #f5eee5;
+  color: #f5eee5;
+  background-color: transparent;
+}
+
+body.night-mode .btn:hover {
+  background-color: #a2785b;
+  border-color: #a2785b;
+  color: white;
+  box-shadow: 0 5px 20px rgba(162, 120, 91, 0.4);
+}
+
+body.night-mode .btn-primary {
+  background-color: #714231;
+  border-color: #714231;
+  color: #f5eee5;
+}
+
+body.night-mode .btn-primary:hover {
+  background-color: #a2785b;
+  border-color: #a2785b;
+  box-shadow: 0 5px 20px rgba(162, 120, 91, 0.5);
+}
+
+body.night-mode .btn-secondary {
+  background-color: transparent;
+  border-color: #a2785b;
+  color: #a2785b;
+}
+
+body.night-mode .btn-secondary:hover {
+  background-color: #a2785b;
+  color: white;
+}
+
+body.night-mode .btn-outline {
+  border-color: #666666;
+  color: #f5eee5;
+}
+
+body.night-mode .btn-outline:hover {
+  border-color: #a2785b;
+  background-color: rgba(162, 120, 91, 0.1);
+}
+
+/* ============================================
+   FOOTER - الفوتر
+============================================ */
+body.night-mode .site-footer {
+  background-color: #0f0f0f;
+  border-top: 1px solid #2c2c2c;
+}
+
+body.night-mode .footer-logo .author-name {
+  color: #f5eee5;
+}
+
+body.night-mode .footer-tagline {
+  color: #999999;
+}
+
+body.night-mode .footer-navigation h4,
+body.night-mode .footer-social h4 {
+  color: #f5eee5;
+}
+
+body.night-mode .footer-menu a {
+  color: #cccccc;
+}
+
+body.night-mode .footer-menu a:hover {
+  color: #a2785b;
+}
+
+body.night-mode .social-link {
+  border-color: #444444;
+  color: #f5eee5;
+}
+
+body.night-mode .social-link:hover {
+  background-color: #714231;
+  border-color: #714231;
+  box-shadow: 0 6px 20px rgba(113, 66, 49, 0.5);
+}
+
+body.night-mode .footer-bottom {
+  border-top-color: #2c2c2c;
+  color: #888888;
+}
+
+/* ============================================
+   FORM ELEMENTS - عناصر النماذج
+============================================ */
+body.night-mode input,
+body.night-mode textarea,
+body.night-mode select {
+  background-color: #2c2c2c;
+  border-color: #444444;
+  color: #f5eee5;
+}
+
+body.night-mode input::placeholder,
+body.night-mode textarea::placeholder {
+  color: #666666;
+}
+
+body.night-mode input:focus,
+body.night-mode textarea:focus,
+body.night-mode select:focus {
+  border-color: #a2785b;
+  outline-color: #a2785b;
+  box-shadow: 0 0 0 3px rgba(162, 120, 91, 0.2);
+}
+
+/* ============================================
+   CODE BLOCKS - كتل الأكواد
+============================================ */
+body.night-mode pre,
+body.night-mode code {
+  background-color: #0f0f0f;
+  border: 1px solid #333333;
+  color: #f5eee5;
+}
+
+body.night-mode code {
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* ============================================
+   IMAGES - الصور
+============================================ */
+body.night-mode img {
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+body.night-mode img:hover {
+  opacity: 1;
+}
+
+/* استثناء للشعارات والأيقونات */
+body.night-mode .site-logo img,
+body.night-mode .footer-logo img,
+body.night-mode .book-cover-wrapper img {
+  opacity: 1;
+}
+
+/* ============================================
+   ACCESSIBILITY - إمكانية الوصول
+============================================ */
+body.night-mode *:focus {
+  outline-color: #a2785b;
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+
+body.night-mode *:focus-visible {
+  outline-style: solid;
+}
+
+/* ============================================
+   TRANSITIONS - الانتقالات السلسة
+============================================ */
+body.night-mode,
+body.night-mode *,
+body.night-mode *::before,
+body.night-mode *::after {
+  transition-property: background-color, color, border-color, box-shadow, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+/* استثناء للعناصر التي لا تحتاج انتقال */
+body.night-mode img,
+body.night-mode video,
+body.night-mode iframe {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* ============================================
+   SCROLLBAR - شريط التمرير
+============================================ */
+body.night-mode::-webkit-scrollbar {
+  width: 12px;
+}
+
+body.night-mode::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+body.night-mode::-webkit-scrollbar-thumb {
+  background: #444444;
+  border-radius: 6px;
+}
+
+body.night-mode::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+/* للفايرفوكس */
+body.night-mode {
+  scrollbar-width: thin;
+  scrollbar-color: #444444 #1a1a1a;
+}
+
+/* ============================================
+   SELECTION - تحديد النص
+============================================ */
+body.night-mode ::selection {
+  background-color: rgba(162, 120, 91, 0.5);
+  color: #f5eee5;
+}
+
+body.night-mode ::-moz-selection {
+  background-color: rgba(162, 120, 91, 0.5);
+  color: #f5eee5;
+}
+
+/* ============================================
+   LOADING & PLACEHOLDER - التحميل
+============================================ */
+body.night-mode .loading,
+body.night-mode .placeholder {
+  background: linear-gradient(
+    90deg,
+    #2c2c2c 25%,
+    #3c3c3c 50%,
+    #2c2c2c 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ============================================
+   PRINT STYLES - أنماط الطباعة
+============================================ */
+@media print {
+  body.night-mode,
+  body.night-mode * {
+    background-color: white !important;
+    color: black !important;
+    border-color: #ccc !important;
+  }
+  
+  body.night-mode img {
+    opacity: 1 !important;
+  }
+  
+  body.night-mode .night-mode-btn,
+  body.night-mode .mobile-menu-toggle {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - استجابة للشاشات الصغيرة
+============================================ */
+@media (max-width: 768px) {
+  body.night-mode .site-header {
+    padding: 16px 0;
+  }
+  
+  body.night-mode .mood-btn {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  body.night-mode .night-mode-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   CUSTOM ANIMATIONS - حركات مخصصة
+============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body.night-mode .mood-quote.show,
+body.night-mode .blog-card,
+body.night-mode .book-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ============================================
+   REDUCED MOTION - تقليل الحركة
+============================================ */
+@media (prefers-reduced-motion: reduce) {
+  body.night-mode *,
+  body.night-mode *::before,
+  body.night-mode *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+

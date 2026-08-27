@@ -1,0 +1,212 @@
+/*
+Mood Section Styles - Optimized Version
+Compatible with Hana Tsuki main.css variables
+*/
+
+/* ============================================
+   MOOD SECTION VARIABLES & BASE STYLES
+============================================ */
+.mood-section {
+  background-color: var(--bg-color);
+  padding: var(--spacing-2xl) 0;
+  position: relative;
+}
+
+.mood-header {
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.mood-header h2 {
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-3xl);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-color);
+}
+
+.mood-header p {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: var(--font-size-lg);
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+.mood-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   MOOD BUTTON BASE STYLES
+============================================ */
+.mood-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  min-width: 160px;
+  background-color: var(--surface-neutral);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-soft);
+  color: var(--text-color);
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.mood-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.mood-btn > * {
+  pointer-events: none;
+  color: inherit;
+}
+
+/* ============================================
+   MOOD ACTIVE STATES - LIGHT MODE
+============================================ */
+body:not(.night-mode) .mood-btn.active {
+  color: var(--color-black);
+  border-color: transparent;
+}
+
+body:not(.night-mode).mood-dark .mood-btn.active {
+  background-color: color-mix(in srgb, var(--color-brown-dark) 35%, var(--color-beige));
+}
+
+body:not(.night-mode).mood-romantic .mood-btn.active {
+  background-color: color-mix(in srgb, var(--color-brown-dark) 15%, #ffbfd4);
+}
+
+body:not(.night-mode).mood-mysterious .mood-btn.active {
+  background-color: color-mix(in srgb, var(--color-brown-dark) 25%, #d7d6f0);
+}
+
+body:not(.night-mode).mood-hopeful .mood-btn.active {
+  background-color: color-mix(in srgb, var(--color-brown-dark) 20%, #fff4e6);
+}
+
+/* ============================================
+   MOOD ACTIVE STATES - DARK MODE
+============================================ */
+body.night-mode .mood-btn {
+  border-color: var(--border-soft);
+}
+
+body.night-mode.mood-dark .mood-btn.active {
+  background-color: color-mix(in srgb, var(--color-brown-dark) 75%, var(--color-black));
+  color: var(--color-beige);
+}
+
+body.night-mode.mood-romantic .mood-btn.active {
+  background-color: color-mix(in srgb, var(--color-brown-dark) 55%, var(--color-black));
+  color: var(--color-beige);
+}
+
+body.night-mode.mood-mysterious .mood-btn.active {
+  background-color: color-mix(in srgb, var(--color-brown-dark) 65%, var(--color-black));
+  color: var(--color-beige);
+}
+
+body.night-mode.mood-hopeful .mood-btn.active {
+  background-color: color-mix(in srgb, var(--color-brown-dark) 60%, var(--color-black));
+  color: var(--color-beige);
+}
+
+/* ============================================
+   MOOD QUOTES
+============================================ */
+.mood-quote-container {
+  max-width: 850px;
+  margin: 0 auto;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--spacing-md);
+}
+
+.mood-quote {
+  text-align: center;
+  padding: var(--spacing-xl);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-slow);
+}
+
+.mood-quote.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quote-text {
+  font-family: var(--font-elegant);
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-tight);
+  color: var(--text-color);
+  font-style: italic;
+  margin-bottom: var(--spacing-md);
+}
+
+.quote-source {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  color: var(--text-color);
+  opacity: 0.85;
+  font-weight: 600;
+}
+
+.quote-source::before {
+  content: "— ";
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+============================================ */
+@media (max-width: 768px) {
+  .mood-section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .mood-header {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .mood-buttons {
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .mood-btn {
+    padding: var(--spacing-md) var(--spacing-lg);
+    min-width: 140px;
+  }
+  
+  .quote-text {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .mood-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mood-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
